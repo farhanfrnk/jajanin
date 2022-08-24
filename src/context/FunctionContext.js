@@ -30,7 +30,6 @@ export const FunctionProvider = props => {
         try {
             let res = await axios.get(`https://dummyjson.com/carts/1`)
             let result = res.data.products
-            console.log(result)
             
         } catch (error) {
             console.log(error)
