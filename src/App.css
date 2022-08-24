@@ -1,7 +1,21 @@
-*{
-  background-color: #161819;
 
-}
 .App {
   text-align: center;
 }
+
+@font-face {
+  font-family: "Josefin-Bold";
+  src: url(./assets/font/josefin-sans/JosefinSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Josefin";
+  src: url(./assets/font/josefin-sans/JosefinSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Josefin-Semi";
+  src: url(./assets/font/josefin-sans/JosefinSans-SemiBold.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');

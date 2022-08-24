@@ -1,13 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import Sidebar from '../component/Sidebar/sidebar'
 
 
-export default function LandingPage() {
+export default function Discover() {
   return (
     <Container>
       <div>
-        <Sidebar />
+        <p></p>
       </div>
     </Container>
   )
@@ -16,7 +15,8 @@ export default function LandingPage() {
 
 const Container = styled.div`
 
-
+width: 100%;
+background: red;
 
 font-family: 'Josefin';
 
