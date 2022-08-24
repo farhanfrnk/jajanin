@@ -11,7 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="*" name="Home" element={<DefaultLayout />} />
+        <Route path="/waroengq" name="Home" element={<DefaultLayout />} />
       </Routes>
     </BrowserRouter>
   );
