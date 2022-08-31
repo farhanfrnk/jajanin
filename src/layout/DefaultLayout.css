@@ -3,7 +3,7 @@
     flex-direction: column;
     min-height: 100vh;
     width: 100%;
-    background-color: #18254F;
+    background-color: #353340;
     padding: 0 10px 0 0px;
 }
 
@@ -13,9 +13,8 @@
     padding: 10px 20px 10px 30px;
     margin-bottom: 15px;
     border-radius: 20px;
-    box-shadow:  5px 5px 10px #141f43,
-             -5px -5px 10px #1c2b5b;
-    background-color: #FBF1DA;
+    
+    background-color: #1F1D2B;
     overflow-y: scroll;
 
     
@@ -25,7 +24,7 @@
 .layout{
     display: flex;
     flex-direction: row;
-    background-color: #18254F;
+    background-color: #1F1D2B;
 }
 
 ::-webkit-scrollbar {
@@ -38,6 +37,6 @@
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background-color: #18254F;
+    background-color: #1F1D2B;
     border-radius: 20px;
   }

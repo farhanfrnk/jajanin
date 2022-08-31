@@ -10,9 +10,9 @@ const Home = React.lazy(() => import('./page/Home'))
 // const Wadas = React.lazy(() => import('./views/pages/datavisualization/wadas'))
 
 const routes = [
-  { path: '/waroengq/', name: 'Home', element: Home },
-  { path: '/waroengq/discover', name: 'Discover', element: Discover },
-  { path: '/waroengq/cart', name: 'Cart', element: Cart }
+  { path: '/', name: 'Home', element: Home },
+  { path: '/discover', name: 'Discover', element: Discover },
+  { path: '/cart', name: 'Cart', element: Cart }
 
 ]
 

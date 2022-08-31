@@ -49,8 +49,8 @@ export default function Header() {
 const Container = styled.div`
 
 box-sizing: border-box;
-background-color: #18254F;
-// padding: 0 20px;
+background-color: #353340;
+// padding: 0 20px; FEFFFF
 // display: flex;
 // align-items: center;
 
@@ -59,8 +59,7 @@ margin: 20px 0;
 
 .header{
   width: 100%;
-  box-shadow:  5px 5px 10px #141f43,
-             -5px -5px 10px #1c2b5b;
+  
 
   border-radius: 20px;
 }
@@ -85,10 +84,10 @@ margin: 20px 0;
   display: inline-block;
   -webkit-transition: box-shadow .4s ease, background .4s ease;
   transition: box-shadow .4s ease, background .4s ease;
-  border: 2px solid rgb(251,241,250);
-  border-radius: 17px;
+  border-radius: 10px;
   // box-shadow: inset 0 0 0 1px #E1E8ED;
-  background: #FBF1DA;
+  color: white;
+  background: #1F1D2B;
   padding: 0;
   padding-right: 52px;
   padding-left: 16px;
@@ -107,25 +106,23 @@ margin: 20px 0;
 }
 
 .sbx-twitter__input:hover {
-  box-shadow: inset 0 0 0 1px #c1d0da;
+  box-shadow: inset 0 0 0 1px #32a7e2;
 }
 
 .sbx-twitter__input:focus, .sbx-twitter__input:active {
   outline: 0;
-  box-shadow: inset 0 0 0 1px #D6DEE3;
-  background: #FFFFFF;
 }
 
 .sbx-twitter__input::-webkit-input-placeholder {
-  color: #9AAEB5;
+  color: #FEFFFF;
 }
 
 .sbx-twitter__input::-moz-placeholder {
-  color: #9AAEB5;
+  color: #FEFFFF;
 }
 
 .sbx-twitter__input:-ms-input-placeholder {
-  color: #9AAEB5;
+  color: #FEFFFF;
 }
 
 .sbx-twitter__input::placeholder {
@@ -179,7 +176,7 @@ margin: 20px 0;
 .sbx-twitter__reset {
   display: none;
   position: absolute;
-  top: 7px;
+  top: 10px;
   right: 33px;
   margin: 0;
   border: 0;
@@ -191,7 +188,7 @@ margin: 20px 0;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  fill: rgba(0, 0, 0, 0.5);
+  fill: rgba(255, 255, 255, 0.5);
 }
 
 .sbx-twitter__reset:focus {

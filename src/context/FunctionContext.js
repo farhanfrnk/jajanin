@@ -37,13 +37,18 @@ export const FunctionProvider = props => {
     }
 
     const fetchSearch = async () => {
-        try {
-            let res = await axios.get(`https://dummyjson.com/products/search?q=${search}`)
-            let result = res.data.products
-            setShop([...result])
-            
-        } catch (error) {
-            console.log(error)
+        if(search == ''){
+            fetchData()
+        }
+        else{
+            try {
+                let res = await axios.get(`https://dummyjson.com/products/search?q=${search}`)
+                let result = res.data.products
+                setShop([...result])
+                
+            } catch (error) {
+                console.log(error)
+            }
         }
     }
 
