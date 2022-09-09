@@ -20,15 +20,17 @@ export default function Home() {
       }, [fetchData, fetchStatus, setFetchStatus])
       
       const card = document.getElementsByClassName('card')
-      for( let i = 0 ; i < card.length; i++){
-        const cardEach = document.getElementsByClassName('card').item(i)
-        cardEach.addEventListener('mouseover', ()=>{
-            cardEach.classList.add('active');
-        })
-        cardEach.addEventListener('mouseleave', ()=>{
-            cardEach.classList.remove('active');
-        })
-      }
+      setTimeout(() => {
+        for( let i = 0 ; i < card.length; i++){
+            const cardEach = document.getElementsByClassName('card').item(i)
+            cardEach.addEventListener('mouseover', ()=>{
+                cardEach.classList.add('active');
+            })
+            cardEach.addEventListener('mouseleave', ()=>{
+                cardEach.classList.remove('active');
+            })
+          }
+        }, 1000);
 
   return (
     <Container>
