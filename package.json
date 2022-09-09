@@ -1,7 +1,7 @@
 {
   "name": "waroeng",
   "version": "0.1.0",
-  "homepage": "https://farhanfrnk.github.io/waroengq",
+  "homepage": "https://jajanin.netlify.app/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
