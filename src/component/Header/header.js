@@ -41,6 +41,7 @@ export default function Header() {
             </div>
           </form>
         </div>
+
       </div>
     </Container>
   )
@@ -59,7 +60,8 @@ margin: 20px 0;
 
 .header{
   width: 100%;
-  
+  display: flex;
+  flex-direction: row;
 
   border-radius: 20px;
 }

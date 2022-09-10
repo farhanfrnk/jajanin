@@ -1,19 +1,25 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { FunctionContext } from '../context/FunctionContext'
 
 
-export default function Cart() {
+export default function Category() {
 
-  const { shop, setShop, functions, fetchStatus, setFetchStatus, search, cart, setCart} = useContext(FunctionContext)
-  const { fetchData, fetchCart } = functions
+//   const { keyword, setKeyword, category, functions, fetchStatus, setFetchStatus} = useContext(FunctionContext)
+//   const { fetchData, fetchCategory } = functions
 
-  useEffect( () => {
+//   const [status, setStatus] = useState(true)
 
-      fetchCart()
+//   useEffect( () => {
+
+//       if(status){
+//         fetchCategory("smarthphone")
+//         fetchCategory("laptops")
+//         setStatus(false)
+//       }
 
 
-    }, [fetchCart])
+//     }, [fetchCategory])
 
   return (
     <Container>
@@ -27,24 +33,28 @@ export default function Cart() {
               </p>
               <div></div>
           </div>
-          { cart ?
-              <div className='map'>
-                  {
-                      cart.map((val, index) =>{
-                          return (
-                              <div className='card' key={index}>
-                                  <h2>{val.title}</h2>
-                                  <div className='text'>
-                                      <p>{val.price}$</p>
-                                  </div>
-                              </div>
-                          )
-                      })
-                  }
-              </div>
-              :
-              <div>Loading.....</div>
-          } 
+          {/* { category ?
+            <div className='map'>
+                {
+                    category.map((val, index) =>{
+                        return (
+                            <div className='card' key={index}>
+                                <div className='img'><img src={val.images[0]} /></div>
+                                <div className='text'>
+                                    <h2>{val.title}</h2>
+                                    <div className='text2'>
+                                        <p>{val.price}$</p>
+                                        <p>Stock : {val.stock}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+            :
+            <div>Loading.....</div>
+        } */}
       </div>
     </Container>
   )

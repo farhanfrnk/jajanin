@@ -10,14 +10,14 @@ const DefaultLayout = () => {
   return (
       <FunctionProvider>
           <div className='layout'>
-          <Sidebar />
-          <div className="wrapper">
-            <Header />
-            <div className="body">
-              <AppContent />
+            <Sidebar />
+            <div className="wrapper">
+              <Header />
+              <div className="body">
+                <AppContent />
+              </div>
             </div>
           </div>
-        </div>
       </FunctionProvider>
 
 

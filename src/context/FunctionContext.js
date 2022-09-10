@@ -12,6 +12,8 @@ export const FunctionProvider = props => {
     const [input, setInput] = useState('')
     const [search, setSearch] = useState('')
     const [cart, setCart] = useState([])
+    const [category, setCategory] = useState([])
+    const [keyword, setKeyword] = useState([])
 
 
 
@@ -30,6 +32,7 @@ export const FunctionProvider = props => {
         try {
             let res = await axios.get(`https://dummyjson.com/carts/1`)
             let result = res.data.products
+            setCart([...result])
             
         } catch (error) {
             console.log(error)
@@ -63,7 +66,7 @@ export const FunctionProvider = props => {
         fetchData,
         handleSumbit,
         fetchCart,
-        fetchSearch
+        fetchSearch,
     }
 
     return (
@@ -74,6 +77,10 @@ export const FunctionProvider = props => {
                 setInput,
                 cart,
                 setCart,
+                category,
+                setCategory,
+                keyword,
+                setKeyword,
                 fetchStatus,
                 setFetchStatus,
                 functions
