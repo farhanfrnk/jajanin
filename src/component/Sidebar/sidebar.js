@@ -42,7 +42,7 @@ export default function Sidebar() {
             <p>Menu</p>
             <ul>
               <li className='menu_bar'>
-                <Link className='menu_link' to='/'>
+                <Link className='menu_link' to='/home'>
                   <FontAwesomeIcon icon={faHouse} />
                   Home
                 </Link>

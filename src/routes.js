@@ -12,7 +12,7 @@ const Category = React.lazy(() => import('./page/Category'))
 // const Wadas = React.lazy(() => import('./views/pages/datavisualization/wadas'))
 
 const routes = [
-  { path: '/', exact: true, name: 'Home', element: Home },
+  { path: '/home', name: 'Home', element: Home },
   { path: '/cart', name: 'Cart', element: Cart },
   { path: '/profil', name: 'Profil', element: Profil },
   { path: '/wishlist', name: 'Wishlist', element: Wishlist },
