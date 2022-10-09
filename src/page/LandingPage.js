@@ -12,7 +12,7 @@ export default function LandingPage() {
         <div className='navbar'>
           <div className='navbar_left'>
             <div className='navbar_left_logo'>
-              <h1>Jajanin.</h1>
+              <a href='/'><h1>Jajanin.</h1></a>
             </div>
           </div>
           <div className='navbar_right'>
@@ -57,10 +57,15 @@ font-family: 'Josefin';
   justify-content: space-between;
   align-items: center;
   padding: 10px 40px 20px 40px;
-  background-color: #1F1D2B;
-  color: #FEFFFF;
+  background-color: white;
+  color: black;
   font-size: 20px;
   font-weight: bold;
+}
+
+.navbar_left_logo a {
+  text-decoration: none;
+  color: black;
 }
 
 .navbar_right {
@@ -88,7 +93,7 @@ font-family: 'Josefin';
 }
 .navbar_right_menu ul li a {
   text-decoration: none;
-  color: #FEFFFF;
+  color: black;
 }
 
 .navbar_right_menu ul li a:hover {
@@ -100,8 +105,8 @@ font-family: 'Josefin';
   justify-content: space-between;
   align-items: center;
   padding: 30px 40px;
-  background-color: #1F1D2B;
-  color: #FEFFFF;
+  background-color: white;
+  color: black;
 }
 
 .hero_content {

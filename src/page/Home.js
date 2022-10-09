@@ -4,6 +4,7 @@ import axios from 'axios'
 import { FunctionContext } from '../context/FunctionContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faHeart, faStar, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { SwitchThemeContext } from '../context/SwitchTheme'
 
 
 export default function Home() {
@@ -20,6 +21,8 @@ export default function Home() {
     const [idProduct, setIdProduct] = useState('')
     const [ratingProduct, setRatingProduct] = useState('')
     const [wishlistStatus, setWishlistStatus] = useState(false)
+
+    const {theme, setTheme} = useContext(SwitchThemeContext)
     
 
 
@@ -83,7 +86,7 @@ export default function Home() {
                 {
                     shop.map((val, index) =>{
                         return (
-                            <div className='card' key={index}>
+                            <div className={`card ${theme}`} key={index}>
                                 <div className='img'><img src={val.images[0]} /></div>
                                 <div className='text'>
                                     <h2>{val.title}</h2>

@@ -1,30 +1,69 @@
-.wrapper{
+.wrapper.dark{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     width: 100%;
     background-color: #353340;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
     padding: 0 10px 0 0px;
 }
 
-.body{
+.wrapper.light{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #73ffe0;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+    padding: 0 10px 0 0px;
+}
+
+.body.dark{
     flex-grow: 1;
     height: 80vh;
     padding: 10px 20px 10px 30px;
     margin-bottom: 15px;
     border-radius: 20px;
-    
     background-color: #1F1D2B;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
     overflow-y: scroll;
-
-    
-
 }
 
-.layout{
+.body.light{
+  flex-grow: 1;
+  height: 80vh;
+  padding: 10px 20px 10px 30px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  background-color: #50E3C2;
+  -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+  overflow-y: scroll;
+}
+
+.layout.light{
+    background-color: #73ffe0;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
     display: flex;
     flex-direction: row;
-    background-color: #1F1D2B;
+}
+
+.layout.dark{
+    display: flex;
+    flex-direction: row;
+    background-color: #353340;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
 }
 
 ::-webkit-scrollbar {

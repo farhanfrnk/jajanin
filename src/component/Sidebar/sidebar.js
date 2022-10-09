@@ -1,13 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faCar, faCartShopping, faCouch, faGlasses, faHeart, faHouse, faLemon, faMobile, faMobileScreenButton, faShirt, faSocks, faUser } from '@fortawesome/free-solid-svg-icons'
+import ButtonSwitch from '../Button/btnSwitch'
+import { SwitchThemeContext } from '../../context/SwitchTheme'
+
+
 
 
 export default function Sidebar() {
-  
+
+  const {theme, setTheme} = useContext(SwitchThemeContext)
+
   const activePage = window.location.href;
 
   const navBar = document.getElementsByClassName('menu_bar')
@@ -31,8 +37,8 @@ export default function Sidebar() {
 
   return (
     <Container>
-      <div>
-        <div className='sidebar'>
+      <div className={theme}>
+        <div className={`sidebar ${theme}`}>
           <div className='logo'>
             <Link to='/'>
               <h1>Jajanin.</h1>
@@ -102,6 +108,9 @@ export default function Sidebar() {
               </li>
             </ul>
           </div>
+          <div className='btnSwitch'>
+              <ButtonSwitch />
+          </div>
         </div>
       </div>
     </Container>
@@ -111,32 +120,50 @@ export default function Sidebar() {
 
 const Container = styled.div`
 
-
 box-sizing: border-box;
-background-color: #353340;
 padding: 10px 20px;
 display: flex;
-align-items: center;
 height: 100vh;
 font-family: 'Inter', sans-serif;
 
-.sidebar
-{
+.sidebar.light{
   display: flex;
   flex-direction: column;
   width: 100%;
 
   display: flex;
   width: 35vh;
-  // background-color:#FBF1DA;
-  background-color: #1F1D2B;
+  background-color: #50E3C2;
+  -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
   height: 95vh;
 
   color: black;
 
   border-radius: 20px;
-  
-  .logo
+}
+
+.sidebar.dark{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  display: flex;
+  width: 35vh;
+  background-color: #1F1D2B;
+  -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+  height: 95vh;
+
+  color: black;
+
+  border-radius: 20px;
+
+}
+
+.logo
   {
     height: 10%;
     // padding: px;
@@ -148,20 +175,20 @@ font-family: 'Inter', sans-serif;
     }
   }
 
-  .menu{
-    display: flex;
-    flex-direction: column;
+.menu{
+  display: flex;
+  flex-direction: column;
 
-    p{
-      margin-bottom: -10px;
-      font-weight: bold;
-      color: #FEFFFF;
-      padding: 0 0 0 10px;
-    }
+  p{
+    margin-bottom: -10px;
+    font-weight: bold;
+    color: #FEFFFF;
+    padding: 0 0 0 10px;
+  }
 
-    ul{
-      padding: 0;
-    }
+  ul{
+    padding: 0;
+  }
     
     .menu_bar{
       list-style: none;
@@ -201,8 +228,6 @@ font-family: 'Inter', sans-serif;
   }
   
 
-}
-
 .active{
   color: white !important;
   font-weight: 700 !important;
@@ -213,6 +238,14 @@ font-family: 'Inter', sans-serif;
   }
 }
 
+
+.btnSwitch{
+  margin-top: auto;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 `
 
